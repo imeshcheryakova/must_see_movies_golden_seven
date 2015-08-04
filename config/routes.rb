@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
   get("/", { :controller => "movies", :action => "index" })
+
+  get("/directors",           { :controller => "movies", :action => "index" })
+
+  get("/directors/create_new", { :controller => "movies", :action => "create_row" })
+  get("/directors/new_form",       { :controller => "movies", :action => "new_form" })
   get("/delete_director/:id", { :controller => "movies", :action => "destroy" })
   get("/directors/:id",       { :controller => "movies", :action => "director" })
-  get("/directors/",           { :controller => "movies", :action => "index" })
+
+  get("edit_form/:id", { :controller => "movies", :action => "edit_form" })
+  get("/update_director/:id", { :controller => "movies", :action => "update_row" })
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -60,4 +68,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

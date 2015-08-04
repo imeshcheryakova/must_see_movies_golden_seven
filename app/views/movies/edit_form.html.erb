@@ -1,0 +1,20 @@
+<h1>Edit Director #<%= @director_one.id %></h1>
+
+<form action="http://localhost:3000/update_director/<%= @director_one.id %>">
+
+  Name:
+  <input name="name" type="text">
+
+  Bio:
+  <input name="bio" type="text">
+
+  Dob:
+  <input name="dob" type="text">
+
+  Image_url:
+  <input name="image_url" type="text">
+
+  <button>Update Director</button>
+</form>
+
+<a href="http://localhost:3000/directors">Cancel and go back</a>

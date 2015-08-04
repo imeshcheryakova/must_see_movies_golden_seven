@@ -25,7 +25,7 @@
     <td><%= director.image_url %></td>
     <td><%= director.created_at %></td>
     <td><%= director.updated_at %></td>
-    <td><a href="http://localhost:3000/edit_form">Edit</a></td>
+    <td><a href="http://localhost:3000/edit_form/<%= director.id %>">Edit</a></td>
     <td><a href="http://localhost:3000/delete_director/<%= director.id %>">Delete</a></td>
   </tr>
   <% end %>
@@ -35,4 +35,4 @@
 </table>
 
 
-<a href="http://localhost:3000/new_form">Create</a>
+<a href="http://localhost:3000/directors/new_form">Create</a>
