@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get("/", { :controller => "movies", :action => "index" })
+  get("/delete_director/:id", { :controller => "movies", :action => "destroy" })
+  get("/directors/:id",       { :controller => "movies", :action => "director" })
+  get("/directors/",           { :controller => "movies", :action => "index" })
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
