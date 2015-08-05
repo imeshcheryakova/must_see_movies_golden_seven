@@ -35,6 +35,7 @@ class MoviesController < ApplicationController
   end
 
   def update_row
+    p = Director.find(params["id"])
     p.name=params["name"]
     p.bio=params["bio"]
     p.dob=params["dob"]
