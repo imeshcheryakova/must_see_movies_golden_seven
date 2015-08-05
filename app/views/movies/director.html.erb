@@ -9,6 +9,8 @@
     <th>Image_url</th>
     <th>Created_at</th>
     <th>Updated_at</th>
+    <th></th>
+    <th></th>
 
   </tr>
   <tr>
@@ -19,5 +21,10 @@
     <td><%= @director_one.image_url %></td>
     <td><%= @director_one.created_at %></td>
     <td><%= @director_one.updated_at %></td>
+    <td><a href="http://localhost:3000/edit_form/<%= @director_one.id %>">Edit</a></td>
+    <td><a href="http://localhost:3000/delete_director/<%= @director_one.id %>">Delete</a></td>
   </tr>
+
     </table>
+
+<a href="http://localhost:3000/directors">Cancel and go back</a>
